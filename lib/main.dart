@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const Amit());
+void main() => runApp(  Amit());
 
 // #docregion my-app
 
 class Amit extends StatelessWidget {
-  const Amit({super.key});
+  int n= 0;
+   Amit({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       title: 'amitTitle',
       home: Scaffold(
-        appBar: AppBar(title: const Text('amit')),
+        appBar: AppBar(title:   Text('amit $n')),
         // #docregion centered-text
-        body: const Center(
-          // #docregion text
-          child: Text('To path to success is never easy'),
-          // #enddocregion text
+        body:   Row(
+          children: [
+            Center(
+              // #docregion text
+              child: Text('To path to success is never easy'),
+              // #enddocregion text
+            ),
+            Center(
+              // #docregion text
+              child: ElevatedButton(onPressed: onPressed, child: Text('+')),
+              // #enddocregion text
+            ),
+          ],
         ),
+
         // #enddocregion centered-text
       ),
     );
+  }
+
+  void onPressed() {
+    n++;
+    print("Count = $n");
   }
 }
