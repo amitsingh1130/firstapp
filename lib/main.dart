@@ -1,47 +1,38 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(  Amit());
+void main() {
+  runApp(MyApp());
+}
 
-// #docregion my-app
+class MyApp extends StatefulWidget {
+  int n=0;
+   MyApp({super.key});
 
-class Amit extends StatelessWidget {
-  int n= 0;
-   Amit({super.key});
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
-      title: 'amitTitle',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title:   Text('amit $n')),
-        // #docregion centered-text
-        body:   Row(
-          children: [
-            Center(
-              // #docregion text
-              child: Text('To path to success is never easy'),
-              // #enddocregion text
-            ),
-            Center(
-              // #docregion text
-              child: ElevatedButton(onPressed: onPressed, child: Text('+')),
-              // #enddocregion text
-            ),
-          ],
-        ),
+        appBar: AppBar(title: Text('Apple  ')),
+        body: Column(children: [Center(child: Text('follow good habits')),
+          ElevatedButton(onPressed: (){
+            print(widget.n);
+            widget.n++;
+            setState(() {
 
-        // #enddocregion centered-text
-      ),
-    );
-  }
+            });
 
-  void onPressed() {
-    n++;
-    print("Count = $n");
+          }, child: Text("Click ${widget.n}")),
+
+
+        ]),
+         ),
+      );
+
   }
 }
-
-
-
-
