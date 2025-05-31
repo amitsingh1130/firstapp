@@ -1,13 +1,13 @@
-import 'package:flutter/material.dart';
-// import
 
+import 'package:mobileapps/quiz.dart';
+import 'package:flutter/material.dart';
+import 'package:mobileapps/quizmain.dart';
 import 'myapp.dart';
-import 'dart:math';
 
 void main() {
-  runApp(Adder());
-  runApp(MaterialApp(home: TriangleCalculator()));
-
+  // runApp(SecondPage());
+  runApp(QuizMainApp());
 
 }
+
 
