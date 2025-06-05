@@ -1,13 +1,11 @@
-
-import 'package:mobileapps/quiz.dart';
 import 'package:flutter/material.dart';
-import 'package:mobileapps/quizmain.dart';
-import 'myapp.dart';
 
+import 'newapp.dart';
+import 'testapp.dart';
 void main() {
-  // runApp(SecondPage());
-  runApp(QuizMainApp());
+// runApp(TestApp());
+   runApp(Newapp());
+   int n = 0;
+   int i = (-1);
 
 }
-
-
