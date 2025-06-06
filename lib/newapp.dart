@@ -7,7 +7,6 @@ class Newapp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("Demo App")),
         body: Column(
-
           children: [
             Container(
               padding: EdgeInsets.all(7),
