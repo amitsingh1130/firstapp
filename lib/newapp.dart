@@ -34,41 +34,12 @@ class Newapp extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Container(color: Colors.pinkAccent, height: 120),
-                    ),
-                    Expanded(
-                      child: Container(color: Colors.brown, height: 120),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(color: Colors.yellow, height: 125),
-                    ),
-                    Expanded(
-                      child: Container(color: Colors.purple, height: 125),
-                    ),
-                    Expanded(
-                      child: Container(color: Colors.orange, height: 125),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                Row(
-                  children: [
-                    Expanded(
                       child: Container(
+                        child: Center(
                         child: Text(
                           "A. Berlin",
                           style: TextStyle(fontSize: 20),
+                        ),
                         ),
                         color: Colors.pink,
                         height: 130,
@@ -76,24 +47,40 @@ class Newapp extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
+                        child: Center(
                         child: Text(
                           "B. Madrid",
                           style: TextStyle(fontSize: 20),
+                        ),
                         ),
                         color: Colors.green,
                         height: 130,
                       ),
                     ),
+                  ],
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
                     Expanded(
                       child: Container(
-                        child: Text("C. Paris", style: TextStyle(fontSize: 20)),
-                        color: Colors.white,
+                        child:Center(
+                        child: Text("C. Paris", style: TextStyle(fontSize: 20)
+                        ),
+                        ),
+                        color: Colors.yellowAccent,
                         height: 130,
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        child: Text("D. Rome", style: TextStyle(fontSize: 20)),
+                        child:Center(
+                        child: Text("D. Rome", style: TextStyle(fontSize: 20)
+                        ),
+                        ),
                         color: Colors.grey,
                         height: 130,
                       ),
@@ -101,6 +88,8 @@ class Newapp extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+            ElevatedButton(onPressed: () {}, child: Text("submit")
             ),
           ],
         ),
