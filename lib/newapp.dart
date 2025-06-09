@@ -5,7 +5,7 @@ class Newapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Demo App")),
+        appBar: AppBar( ),
         body: Column(
           children: [
             Column(
@@ -36,10 +36,11 @@ class Newapp extends StatelessWidget {
                     Expanded(
                       child: Container(
                         child: Center(
-                        child: Text(
-                          "A. Berlin",
-                          style: TextStyle(fontSize: 20),
-                        ),
+                          child: Text(
+
+                            "A. Berlin",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
                         color: Colors.pink,
                         height: 130,
@@ -48,10 +49,10 @@ class Newapp extends StatelessWidget {
                     Expanded(
                       child: Container(
                         child: Center(
-                        child: Text(
-                          "B. Madrid",
-                          style: TextStyle(fontSize: 20),
-                        ),
+                          child: Text(
+                            "B. Madrid",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
                         color: Colors.green,
                         height: 130,
@@ -67,9 +68,11 @@ class Newapp extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        child:Center(
-                        child: Text("C. Paris", style: TextStyle(fontSize: 20)
-                        ),
+                        child: Center(
+                          child: Text(
+                            "C. Paris",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
                         color: Colors.yellowAccent,
                         height: 130,
@@ -77,9 +80,11 @@ class Newapp extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
-                        child:Center(
-                        child: Text("D. Rome", style: TextStyle(fontSize: 20)
-                        ),
+                        child: Center(
+                          child: Text(
+                            "D. Rome",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
                         color: Colors.grey,
                         height: 130,
@@ -89,11 +94,29 @@ class Newapp extends StatelessWidget {
                 ),
               ],
             ),
-            ElevatedButton(onPressed: () {}, child: Text("submit")
+
+            Expanded(
+              child: Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Submit');
+                    },
+                    child: Text(
+                      "Submit",
+                      style: TextStyle(
+                        backgroundColor: Colors.yellow,
+                        fontSize: 35,
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
             ),
           ],
         ),
-      ),
+      )
     );
   }
 }
