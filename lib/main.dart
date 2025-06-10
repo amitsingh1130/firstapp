@@ -1,92 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:mobileapps/utilities.dart';
-import 'package:mobileapps/vsjone.dart';
+import 'package:mobileapps/pageone.dart';
+
 
 void main() {
    runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-         '/': (context) => VsjOne(),
-         '/second': (context) => VsjTwo(),
-         '/three': (context) => VsjThree(),
+         '/': (context) => PageOne(),
+         '/second': (context) => PageTwo(),
+         '/three': (context) => PageThree(),
       },
    ));
 }
 
-//*******************************VsjOne************************************
 
-class VsjTwo extends StatefulWidget {
+
+
+//*******************************PageOne************************************
+
+//*******************************PageTwo************************************
+
+//*******************************PageThree************************************
+
+class PageThree extends StatefulWidget {
    @override
-   _VsjTwo createState() {
-      return _VsjTwo();
+   _PageThree createState() {
+      return _PageThree();
    }
 }
 
-class _VsjTwo extends State<VsjTwo> {
+class _PageThree extends State<PageThree> {
    @override
    Widget build(BuildContext context) {
       return Scaffold(
-         backgroundColor: Colors.tealAccent,
+         backgroundColor: Colors.indigo,
          appBar: AppBar(
             centerTitle: true,
-            title: const Text("VSJ Two"),
-         ),
-         body: Column(
-            children: [
-               Center(
-                  child: Card(
-                     child: ElevatedButton(
-                        onPressed: () {
-                           Navigator.pushNamed(context, '/three');
-                        },
-                        child: const Text('Go to VSJ:3'),
-                     ),
-                  ),
-               ),
-               Center(
-                  child: Card(
-                     child: ElevatedButton(
-                        onPressed: () {
-                           Navigator.pushNamed(context, '/');
-                        },
-                        child: const Text('Go back to VSJ:1'),
-                     ),
-                  ),
-               ),
-               Hero(
-                  tag: 'logo',
-                  child: Center(
-                     child: Card(
-                         child: Image(
-                             height: 200, image: NetworkImage(Utilities.imagepath))),
-                  ),
-               ),
-            ],
-         ),
-      );
-   }
-}
-
-//*******************************VsjTwo************************************
-
-//*******************************VsjThree************************************
-
-class VsjThree extends StatefulWidget {
-   @override
-   _VsjThree createState() {
-      return _VsjThree();
-   }
-}
-
-class _VsjThree extends State<VsjThree> {
-   @override
-   Widget build(BuildContext context) {
-      return Scaffold(
-         backgroundColor: Colors.teal,
-         appBar: AppBar(
-            centerTitle: true,
-            title: const Text("VSJ Three"),
+            title: const Text("Page Three"),
          ),
          body: Column(
             children: [
@@ -96,7 +48,7 @@ class _VsjThree extends State<VsjThree> {
                         onPressed: () {
                            Navigator.pop(context);
                         },
-                        child: const Text('Go back to VSJ:2'),
+                        child: const Text('Go back to Page:2'),
                      ),
                   ),
                ),
@@ -120,3 +72,59 @@ class _VsjThree extends State<VsjThree> {
 
 
 //*******************************Utilities************************************
+
+
+
+class PageTwo extends StatefulWidget {
+   const PageTwo({super.key});
+
+   @override
+   _PageTwo createState() {
+      return _PageTwo();
+   }
+}
+
+class _PageTwo extends State<PageTwo> {
+   @override
+   Widget build(BuildContext context) {
+      return Scaffold(
+         backgroundColor: Colors.red,
+         appBar: AppBar(
+            centerTitle: true,
+            title: const Text("Page Two"),
+         ),
+         body: Column(
+            children: [
+               Center(
+                  child: Card(
+                     child: ElevatedButton(
+                        onPressed: () {
+                           Navigator.pushNamed(context, '/three');
+                        },
+                        child: const Text('Go to Page:3'),
+                     ),
+                  ),
+               ),
+               Center(
+                  child: Card(
+                     child: ElevatedButton(
+                        onPressed: () {
+                           Navigator.pushNamed(context, '/');
+                        },
+                        child: const Text('Go back to Page:1'),
+                     ),
+                  ),
+               ),
+               Hero(
+                  tag: 'logo',
+                  child: Center(
+                     child: Card(
+                         child: Image(
+                             height: 200, image: NetworkImage(Utilities.imagepath))),
+                  ),
+               ),
+            ],
+         ),
+      );
+   }
+}

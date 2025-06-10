@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:mobileapps/utilities.dart';
-class VsjOne extends StatelessWidget {
+class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.tealAccent,
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('VSJ One'),
+        title: const Text('Page One'),
       ),
       body: Column(
         children: [
           Center(
             child: Card(
               child: ElevatedButton(
-                  child: const Text('Go to Vsj:2'),
+                  child: const Text('Go to Page:2'),
                   onPressed: () {
                     Navigator.pushNamed(context, '/second');
                   }),
@@ -34,6 +34,6 @@ class VsjOne extends StatelessWidget {
   }
 }
 
-//*******************************VsjOne************************************
+//*******************************PageOne************************************
 
-//*******************************VsjTwo************************************
+//*******************************PageTwo************************************
